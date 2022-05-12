@@ -1,0 +1,26 @@
+nav {
+    background-color: #FF8243;
+    width: 100% !important;
+}
+a {
+    font-family:'Noto Sans JP',
+    sans-serif;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+a:hover, a:focus {
+    background-size: 100% 2px;
+}
+.dropdown-menu {
+    background-color: #FF8243;
+}
+img {
+    width: 5rem !important;
+}
