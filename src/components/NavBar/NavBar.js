@@ -1,6 +1,7 @@
 import './NavBar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Container, NavDropdown, Nav, Form, FormControl, Button } from "react-bootstrap"
+import CartWidget from "../CartWidget/CartWidget"
 const NavBar = () => {
     return (
         <>
@@ -32,6 +33,7 @@ const NavBar = () => {
             />
             <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning"
             type="submit">Buscar</Button>
+            <CartWidget/>
         </Form>
         </Navbar.Collapse>
     </Container>
