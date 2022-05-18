@@ -6,11 +6,11 @@ const ItemCount = ({stock, title}) =>{
     return(
         <>
         <div className="itemCount">
-            <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => setCount(count - 1)} disabled={count === 1}>-</Button>
+            <Button className="item-button" variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => setCount(count - 1)} disabled={count === 1}>-</Button>
             <p>{count}</p>
-            <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => setCount(count + 1)} disabled={count >= stock}>+</Button>
+            <Button className="item-button" variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => setCount(count + 1)} disabled={count >= stock}>+</Button>
         </div>
-            <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => console.log(`Compraste ${count} ${title} `)}>Agregar al Carrito</Button>
+            <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => console.log(`Agregaste al Carrito ${count} ${title}.`)}>Agregar al Carrito</Button>
         </>
     )
 }

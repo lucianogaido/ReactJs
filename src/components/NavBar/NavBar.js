@@ -25,14 +25,8 @@ const NavBar = () => {
             <Nav.Link href="#">Contacto</Nav.Link>
         </Nav>
         <Form className="d-flex">
-            <FormControl
-            type="search"
-            placeholder="Buscar"
-            className="me-2"
-            aria-label="Search"
-            />
-            <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning"
-            type="submit">Buscar</Button>
+            <FormControl type="search" placeholder="Buscar" className="me-2" aria-label="Search"/>
+            <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" type="submit">Buscar</Button>
             <CartWidget/>
         </Form>
         </Navbar.Collapse>
