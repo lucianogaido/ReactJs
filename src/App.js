@@ -1,13 +1,13 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
-import CardList from './components/CardList/CardList';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App ">
       <NavBar/>
       <h1>Nuna  </h1>
-      <CardList />
+      <ItemListContainer />
     </div>
   );
 }
