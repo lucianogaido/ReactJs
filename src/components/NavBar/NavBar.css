@@ -1,4 +1,5 @@
 nav {
+    position: fixed;
     background-color: #FF8243;
     width: 100% !important;
 }

@@ -1,4 +1,4 @@
-import './Card.css';
+import './Item.css';
 import {Card} from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount"
 const CardItem = ({title, image, text, stock}) => {
