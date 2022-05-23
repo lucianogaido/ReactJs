@@ -1,6 +1,6 @@
 import ItemList from '../ItemList/ItemList'
 import { useEffect, useState } from 'react'
-
+import {CardGroup} from "react-bootstrap"
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
@@ -35,7 +35,7 @@ const getProducts = () => {
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
             resolve(productos)
-        }, 5000)
+        }, 2000)
     })
 }  
 
@@ -53,7 +53,9 @@ useEffect( () => {
     return(
         <main className="container" >
             
-            <ItemList title={'Nuestros Productos'} products={productos}/>
+            <CardGroup>
+                <ItemList products={products}/>
+            </CardGroup>
         </main>
     )
 }
