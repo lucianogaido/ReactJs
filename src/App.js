@@ -1,13 +1,17 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Home from './pages/Home'
 function App() {
   return (
     <div className="App ">
-      <NavBar/>
-      <h1>Nuna  </h1>
-      <ItemListContainer />
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route exact path ='/' element={<Home/>}/>
+          <Route path='*' element={<h1>404. Pagina no encontrada</h1>}/>
+        </Routes>        
+      </BrowserRouter>
     </div>
   );
 }

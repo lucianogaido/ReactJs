@@ -1,4 +1,5 @@
 import './NavBar.css';
+import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Container, NavDropdown, Nav, Form, FormControl, Button } from "react-bootstrap"
 import CartWidget from "../CartWidget/CartWidget"
@@ -15,7 +16,7 @@ const NavBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
         >
-            <Nav.Link href="#">Inicio</Nav.Link>
+            <Nav.Link><Link className='link' to="/">Inicio</Link></Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
             <NavDropdown.Item href="#action3">Mermeladas</NavDropdown.Item>
             <NavDropdown.Item href="#action4">Conservas</NavDropdown.Item>
