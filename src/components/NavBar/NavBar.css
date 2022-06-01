@@ -4,6 +4,8 @@ nav {
     width: 100% !important;
 }
 a {
+    color: black !important;
+    text-decoration: none !important;
     font-family:'Noto Sans JP',
     sans-serif;
     font-weight: bolder;

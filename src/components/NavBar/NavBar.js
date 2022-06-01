@@ -8,7 +8,7 @@ const NavBar = () => {
         <>
         <Navbar expand="lg">
     <Container fluid>
-        <Navbar.Brand href="#"><img src="../Nuna.png" alt="logo"/></Navbar.Brand>
+        <Navbar.Brand as={Link} to='/'><img src="../Nuna.png" alt="logo"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -16,14 +16,14 @@ const NavBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
         >
-            <Nav.Link><Link className='link' to="/">Inicio</Link></Nav.Link>
+            <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Mermeladas</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Conservas</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Blends de Té</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to='/category/mermeladas'>Mermeladas</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to='/category/conservas'>Conservas</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to='/category/blends'>Blends de Té</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">Galería</Nav.Link>
-            <Nav.Link href="#">Contacto</Nav.Link>
+            <Nav.Link as={Link} to='/'>Galería</Nav.Link>
+            <Nav.Link as={Link} to='/'>Contacto</Nav.Link>
         </Nav>
         <Form className="d-flex">
             <FormControl type="search" placeholder="Buscar" className="me-2" aria-label="Search"/>

@@ -1,6 +1,6 @@
 import ItemList from '../ItemList/ItemList'
 import { useEffect, useState} from 'react'
-import {CardGroup} from "react-bootstrap"
+import {Row} from "react-bootstrap"
 import productos from '../../data/productsMock'
 
 const ItemListContainer = () => {
@@ -26,26 +26,11 @@ useEffect( () => {
     })
 }, [])
 
-// useEffect( () => {
-//     fetch('')
-//     .then( (response) => {
-//         return response.json()
-//     })
-//     .then( (res) => {
-//         console.log("respuesta", res)
-//     })
-//     .finally( () => {
-//     })
-// }, [])
-
-
-
     return(
         <main className="container" >
-            
-            <CardGroup>
+            <Row xs={1}  md={2} lg={3}>
                 <ItemList products={products}/>
-            </CardGroup>
+            </Row>
         </main>
     )
 }
