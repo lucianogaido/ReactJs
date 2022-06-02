@@ -26,16 +26,15 @@ useEffect( () => {
     })
 }, [])
 
-if(loading){
-    return(
-        <Spinner color='warning' className='spinner'/>
-    )
-}
     return(
         <main className="container" >
+            {loading?
+            <Spinner color='warning' className='spinner'/>
+            :
             <Row xs={1}  md={2} lg={3}>
                 <ItemList products={products}/>
             </Row>
+            }
         </main>
     )
 }

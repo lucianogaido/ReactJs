@@ -38,18 +38,16 @@ const ProductList = () => {
         })
     }
 
-    if(loading){
-        return(
-            <Spinner color='warning' className='spinner'/>
-        )
-    }
-
     return(
         <>
         <h2>{category.toUpperCase()}</h2>
+        {loading ?
+        <Spinner color='warning' className='spinner'/>
+        :
         <Row xs={1}  md={2} lg={3} className="container">
             <ItemList products={products}/>
         </Row>
+        }
         </>
     )
 }

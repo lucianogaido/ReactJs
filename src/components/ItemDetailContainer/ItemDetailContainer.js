@@ -36,17 +36,16 @@ const ItemDetailContainer =() => {
             }, 2000)
         })
     }  
-
-    if(loading){
-        return(
-            <Spinner color='warning' className='spinner'/>
-        )
-    }
     
     
     return(
         <>
+        <h2>Detalle del Producto</h2>
+        {loading ?
+        <Spinner color='warning' className='spinner'/>
+        :
         <ItemDetail data={product}/>
+        }
         </>
     )
 }

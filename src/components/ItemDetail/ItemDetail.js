@@ -1,7 +1,16 @@
-import { Container, Image } from "react-bootstrap"
+import { Container, Image, Button } from "react-bootstrap"
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { useState } from "react";
+import {Link} from "react-router-dom"
+
 const ItemDetail =({data}) => {
+    const [quantity, setQuantity] = useState(1);
+    const [showButton, setShowButton] = useState(false)
+
+    const addToCart = () => {
+        console.log("CANTIDAD", quantity)
+    }
     return(
         <>
         <Container className="item_detail row">
@@ -12,7 +21,16 @@ const ItemDetail =({data}) => {
                 <h2>{data.title}</h2>
                 <div>{data.description}</div>
                 <p className="price">${data.price}</p>
-                <ItemCount/>
+                {!showButton ?
+                <ItemCount
+                    quantity={quantity}
+                    updateQuantity = {setQuantity}
+                    setShowButton = {setShowButton}
+                    stock={data.stock}
+                />
+                :
+                <Button as={Link} to="/cart">Terminar mi Compra</Button>
+                }
             </aside>
         </Container>
         </>
