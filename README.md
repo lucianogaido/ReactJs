@@ -5,7 +5,7 @@ Este es un Ecomerce , el cual comencé a crear desde el comienzo de la carrera D
 Al ser un proyecto que recien esta comenzando todavia no cuenta con imagenes propias, mas que el Logo. Intento continuar con la estetica de las versiones anteriores creadas por mi, ya que fueron las solicitadas por la clienta.
 
 ## Dependencias
-Para la misma instale la libreria "react-bootstrap" , ya que la conocia con anterioridad, me gustan sus estilos, estoy familiarizado con la misma y me da ciertas libertades sobretodo con la imagen que quiero darle a la marca. A su vez tambien instalé @fortawesome/react-fontawesome" para incorporar los iconos necesarios y por ultimo "react-router-dom" para poder incomportar los Links y useParams.
+Para la misma instale la libreria "react-bootstrap" , ya que la conocia con anterioridad, me gustan sus estilos, estoy familiarizado con la misma y me da ciertas libertades sobretodo con la imagen que quiero darle a la marca. A su vez tambien instalé @fortawesome/react-fontawesome" para incorporar los iconos necesarios, tambien instalé bootstrap reactstrap para incoporar Spinner louders y por ultimo "react-router-dom" para poder incomportar los Links y useParams.
 
 ## Available Scripts
 

@@ -2,11 +2,19 @@ import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import productos from '../../data/productsMock'
 import {useParams, useNavigate} from 'react-router-dom'
+import { Spinner } from 'reactstrap';
+import '../../App.css'
 
 const ItemDetailContainer =() => {
     const [product, setProduct]= useState({})
+    const [loading, setLoading] = useState(true)
+
     const {id} = useParams();
     const navigate = useNavigate()
+    
+    const productFilter = productos.find((product)=>{
+        return product.id === Number(id);
+    })
     
     useEffect( () => {
         getItem()
@@ -24,14 +32,18 @@ const ItemDetailContainer =() => {
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
                 resolve(productFilter)
+                setLoading(false)
             }, 2000)
         })
     }  
+
+    if(loading){
+        return(
+            <Spinner color='warning' className='spinner'/>
+        )
+    }
     
     
-    const productFilter = productos.find((product)=>{
-        return product.id === Number(id);
-    })
     return(
         <>
         <ItemDetail data={product}/>
