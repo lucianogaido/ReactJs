@@ -35,7 +35,7 @@ const ProductList = () => {
     }
     return(
         <>
-        <h2>Product List</h2>
+        <h2>{category.toUpperCase()}</h2>
         <Row xs={1}  md={2} lg={3} className="container">
             <ItemList products={products}/>
         </Row>

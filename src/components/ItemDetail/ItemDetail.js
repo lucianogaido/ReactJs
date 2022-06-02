@@ -4,7 +4,7 @@ import ItemCount from '../ItemCount/ItemCount';
 const ItemDetail =({data}) => {
     return(
         <>
-        <Container className="row">
+        <Container className="item_detail row">
             <article className="col-xs-12 col-sm-12 col-lg-6">
                 <Image className="imgDetail rounded" src={`../${data.image}`}/>
             </article>
