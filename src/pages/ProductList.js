@@ -37,7 +37,7 @@ const ProductList = () => {
         <>
         <h2>Product List</h2>
         <Row xs={1}  md={2} lg={3} className="container">
-        <ItemList products={products}/>
+            <ItemList products={products}/>
         </Row>
         </>
     )

@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Nuna Espiritu De la Tierra
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nuna es un microemprendimiento que comenzo hace apenas un año, el cual se dedica a comercializar productos artesanales que consisten en Mermeladas, Conservas y Blends de Té, todos ellos absolutamente naturales y sin conservantes.
+Este es un Ecomerce , el cual comencé a crear desde el comienzo de la carrera Desarrollo Web Full Stack en CoderHouse. A medida que fui avanzando en los cursos fui dandole funcionalidades y estilos, hasta dar con el curso de ReactJs. El me propuso comenzar la app desde cero ya que la idea es que sea una Single Page Aplication.
+Al ser un proyecto que recien esta comenzando todavia no cuenta con imagenes propias, mas que el Logo. Intento continuar con la estetica de las versiones anteriores creadas por mi, ya que fueron las solicitadas por la clienta.
+
+## Dependencias
+Para la misma instale la libreria "react-bootstrap" , ya que la conocia con anterioridad, me gustan sus estilos, estoy familiarizado con la misma y me da ciertas libertades sobretodo con la imagen que quiero darle a la marca. A su vez tambien instalé @fortawesome/react-fontawesome" para incorporar los iconos necesarios y por ultimo "react-router-dom" para poder incomportar los Links y useParams.
 
 ## Available Scripts
 
