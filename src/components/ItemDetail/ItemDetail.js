@@ -5,12 +5,9 @@ import { useState } from "react";
 import {Link} from "react-router-dom"
 
 const ItemDetail =({data}) => {
-    const [quantity, setQuantity] = useState(1);
+    const [count, setcount] = useState(1);
     const [showButton, setShowButton] = useState(false)
 
-    const addToCart = () => {
-        console.log("CANTIDAD", quantity)
-    }
     return(
         <>
         <Container className="item_detail row">
@@ -23,10 +20,11 @@ const ItemDetail =({data}) => {
                 <p className="price">${data.price}</p>
                 {!showButton ?
                 <ItemCount
-                    quantity={quantity}
-                    updateQuantity = {setQuantity}
+                    count={count}
+                    updatecount = {setcount}
                     setShowButton = {setShowButton}
                     stock={data.stock}
+                    data={data}
                 />
                 :
                 <Button as={Link} to="/cart">Terminar mi Compra</Button>

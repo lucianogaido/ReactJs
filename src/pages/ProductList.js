@@ -15,6 +15,7 @@ const ProductList = () => {
         setProduct([])
         getItem()
         .then( (response) => {
+
             filterByCategory(response)
             
         })
@@ -33,8 +34,9 @@ const ProductList = () => {
     const filterByCategory = (array) =>{
         return array.map( (item) => {
             if(item.category === category){
-                return setProduct(products =>[...products,item])
+                return  setProduct(products =>[...products,item])
             }
+
         })
     }
 
@@ -44,8 +46,8 @@ const ProductList = () => {
         {loading ?
         <Spinner color='warning' className='spinner'/>
         :
-        <Row xs={1}  md={2} lg={3} className="container">
-            <ItemList products={products}/>
+        <Row  xs={1}  md={2} lg={3} className="container">
+            <ItemList key={productos.id} products={products}/>
         </Row>
         }
         </>

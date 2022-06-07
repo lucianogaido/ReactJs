@@ -6,7 +6,8 @@ const productos = [
         image : 'arandanos.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const productos = [
         image : 'ciruela.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const productos = [
         image : 'durazno.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const productos = [
         image : 'frambuesa.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ const productos = [
         image : 'frutilla.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ const productos = [
         image : 'kiwi.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ const productos = [
         image : 'mandarina.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ const productos = [
         image : 'naranja.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ const productos = [
         image : 'tomate.png',
         description: "Elaboración Artesanal con frutos seleccionados de Alta Calidad. 100% NATURALES",
         stock: 5,
-        category: 'mermeladas'
+        category: 'mermeladas',
+        quantity: 0
     },
     {
         id: 10,
@@ -87,7 +96,8 @@ const productos = [
         image : 'ajies.png',
         description: 'Elaboración Artesanal con hortalizas  de Alta Calidad. 100% NATURALES',
         stock: 10,
-        category: 'conservas'
+        category: 'conservas',
+        quantity: 0
     },
     {
         id: 11,
@@ -96,7 +106,8 @@ const productos = [
         image : 'berenjenas.png',
         description: 'Elaboración Artesanal con hortalizas  de Alta Calidad. 100% NATURALES',
         stock: 10,
-        category: 'conservas'
+        category: 'conservas',
+        quantity: 0
     },
     {
         id: 12,
@@ -105,7 +116,8 @@ const productos = [
         image : 'pikles2.png',
         description: 'Elaboración Artesanal con hortalizas  de Alta Calidad. 100% NATURALES',
         stock: 10,
-        category: 'conservas'
+        category: 'conservas',
+        quantity: 0
     },
     {
         id: 13,
@@ -114,7 +126,8 @@ const productos = [
         image : 'pikles1.png',
         description: 'Elaboración Artesanal con hortalizas  de Alta Calidad. 100% NATURALES',
         stock: 10,
-        category: 'conservas'
+        category: 'conservas',
+        quantity: 0
     },
     {
         id: 14,
@@ -123,7 +136,8 @@ const productos = [
         image : 'blend1.png',
         description: 'Creados con Hebras de la más alta calidad mezcladas con frutas, hierbas, especias,flores y esencias. 100% NATURALES',
         stock: 2,
-        category: 'blends'
+        category: 'blends',
+        quantity: 0
     },
     {
         id: 15,
@@ -132,7 +146,8 @@ const productos = [
         image : 'blend2.png',
         description: 'Creados con Hebras de la más alta calidad mezcladas con frutas, hierbas, especias,flores y esencias. 100% NATURALES',
         stock: 2,
-        category: 'blends'
+        category: 'blends',
+        quantity: 0
     },
     {
         id: 16,
@@ -141,7 +156,8 @@ const productos = [
         image : 'blend3.png',
         description: 'Creados con Hebras de la más alta calidad mezcladas con frutas, hierbas, especias,flores y esencias. 100% NATURALES',
         stock: 2,
-        category: 'blends'
+        category: 'blends',
+        quantity: 0
     },
 ]
 
