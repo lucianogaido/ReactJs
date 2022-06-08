@@ -12,12 +12,12 @@ const ProductList = () => {
     const [loading, setLoading] = useState(true)
     
     useEffect( () => {
+        setLoading(true)
         setProduct([])
         getItem()
         .then( (response) => {
-
-            filterByCategory(response)
-            
+            const productsByCategory = response.filter ((item)=> item.category ===category)
+            setProduct(productsByCategory)
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [category])
@@ -30,15 +30,6 @@ const ProductList = () => {
             }, 2000)
         })
     }  
-
-    const filterByCategory = (array) =>{
-        return array.map( (item) => {
-            if(item.category === category){
-                return  setProduct(products =>[...products,item])
-            }
-
-        })
-    }
 
     return(
         <>

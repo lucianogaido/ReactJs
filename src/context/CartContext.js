@@ -1,26 +1,30 @@
 import { createContext, useState } from "react";
-import ProductList from "../pages/ProductList";
 
 const CartContext= createContext();
 
 const CartProvider = ({children}) =>{
-    const[cartListItems, setCartListItems] = useState([])
+    const [cartListItems, setCartListItems] = useState([])
+    const [cartQuantity, setCartQuantity] = useState(1)
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const addProductToCart =(product)=>{
-        console.log("id del producto= ",product.data.id)
+        console.log("product",product)
         let isInCart = cartListItems.find(cartItem => cartItem.data.id === product.data.id)
+        console.log("is in cart", isInCart)
+        setTotalPrice(totalPrice + (product.data.price * product.data.quantity))
         if(!isInCart ){
-            console.log("se agrego el producto", product)
             setCartListItems(cartListItems=>[...cartListItems,product])
         }else{
-            console.log("el producto ya fue agregado")
-            product.data.quantity ++; // acá quiero sumarle el count de <ItemCount/>
+            setCartQuantity(cartQuantity + product.data.quantity)
+            console.log("cartquantity", cartQuantity)
         }
 
     }
     const data ={
         cartListItems,
-        addProductToCart
+        addProductToCart,
+        cartQuantity,
+        totalPrice
     }
 
     return(

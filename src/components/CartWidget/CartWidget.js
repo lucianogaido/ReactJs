@@ -5,7 +5,8 @@ import {useState, useContext} from "react"
 import CartContext from '../../context/CartContext';
 
 function MydModalWithGrid(props) {
-    const {cartListItems}= useContext(CartContext)
+    const {cartListItems, cartQuantity, totalPrice}= useContext(CartContext)
+    console.log("cartListItems desde checkout: ", cartListItems)
     return (
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
             <Modal.Header closeButton>
@@ -29,7 +30,8 @@ function MydModalWithGrid(props) {
                             <Col xs={6} md={4}>
                                 <p>{item.data.title}</p>
                                 <p>${item.data.price}</p>
-                                <p>cantidad {item.data.quantity}</p>
+                                <p>cantidad {cartQuantity}</p>
+                                <p>Total: ${totalPrice}</p>
                             </Col>
                         </Row>
                     )
