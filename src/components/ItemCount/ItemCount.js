@@ -6,9 +6,11 @@ import { useContext } from 'react';
 const ItemCount = ({stock, count, updatecount, setShowButton, data}) =>{
     const {addProductToCart} = useContext(CartContext)
     const addProduct =()=>{
+        data.quantity += count;
         setShowButton(true)
         addProductToCart({data})
     }
+    console.log(data)
     return(
         <>
         <div className="itemCount">
