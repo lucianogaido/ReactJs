@@ -1,3 +1,25 @@
 #cartIcon{
     margin-left: 0.5rem;
 }
+.cart-item{
+    text-align: center ;
+    padding: 2px;
+}
+.cart-menu-container{
+    border-bottom: 1px solid black;
+}
+.cart-menu{
+    text-align: center ;
+    font-weight: 500;
+    padding: 2px;
+}
+.cart-title {
+    text-align: center ;
+    padding: 2px;
+    font-weight: 500;
+}
+.cart-total{
+    text-align: right ;
+    padding: 2px;
+    font-weight: 500;
+}

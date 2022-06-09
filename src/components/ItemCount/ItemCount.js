@@ -17,10 +17,9 @@ const ItemCount = ({stock, count, updatecount, setShowButton, data}) =>{
 
     const addProduct =()=>{
         data.quantity += count;
-        // setShowButton(true)
+        setShowButton(true)
         addProductToCart({data:product})
     }
-    // console.log(data)
     return(
         <>
         <div className="itemCount">
