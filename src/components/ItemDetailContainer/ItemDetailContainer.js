@@ -4,6 +4,7 @@ import productos from '../../data/productsMock'
 import {useParams, useNavigate} from 'react-router-dom'
 import { Spinner } from 'reactstrap';
 import '../../App.css'
+// import {doc, getDoc} from 'firebase/firesore'
 
 const ItemDetailContainer =() => {
     const [product, setProduct]= useState({})
@@ -17,6 +18,10 @@ const ItemDetailContainer =() => {
     })
     
     useEffect( () => {
+        // getProduct()
+        // .then ((prod)=>{
+        //     setProduct(prod)
+        // })
         getItem()
         .then( (response) => {
             if(productFilter=== undefined){
@@ -28,6 +33,15 @@ const ItemDetailContainer =() => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
     
+    // const getProduct = async () =>{
+    //     const docRef = doc(dataBase, "productos", id)
+    //     const docSnaptshop = await getDoc(docRef)
+    //     let product= docSnaptshop.data()
+    //     product.id = docSnaptshop.id
+    //        return product
+    //     console.log("docSnaptshop",docSnaptshop.data())
+    // }
+
     const getItem = () => {
         return new Promise( (resolve, reject) => {
             setTimeout(() => {

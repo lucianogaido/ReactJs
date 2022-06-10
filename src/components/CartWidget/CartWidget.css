@@ -23,3 +23,28 @@
     padding: 2px;
     font-weight: 500;
 }
+.cart-page-amount{
+    text-align: center ;
+    padding: 2px;
+    font-weight: 500;
+    font-size: x-large;
+
+}
+.cart-page-total{
+    text-align: right ;
+    padding: 2px;
+    font-weight: 500;
+    font-size: x-large;
+}
+.cart-count{
+    display: flex;
+    align-items:flex-start;
+    text-align: center ;
+    padding-top: 2px;
+    padding-left: 1.5rem;
+}
+.cart-btn{
+    height: 2rem;
+    margin: 2px;
+
+}

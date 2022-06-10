@@ -34,7 +34,6 @@ const CartProvider = ({children}) =>{
         setcartAmount(0)
     }
     
-    
 
     const data ={
         cartListItems,
@@ -42,7 +41,8 @@ const CartProvider = ({children}) =>{
         cartAmount,
         totalPrice,
         removeProduct,
-        clearCart
+        clearCart,
+        setTotalPrice
     }
 
     return(

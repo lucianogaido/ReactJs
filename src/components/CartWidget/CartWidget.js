@@ -6,7 +6,6 @@ import CartContext from '../../context/CartContext';
 
 function MydModalWithGrid(props) {
     const {cartListItems,totalPrice, removeProduct, clearCart}= useContext(CartContext)
-    
     return (
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
             <Modal.Header closeButton>

@@ -4,6 +4,9 @@ import {Row} from "react-bootstrap"
 import productos from '../../data/productsMock'
 import { Spinner } from 'reactstrap';
 import '../../App.css'
+//Firestore
+// import {collection, getDocs} from 'firebase/firesore';
+// import dataBase from '../../data/firebaseConfig';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])

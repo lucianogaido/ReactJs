@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Detail from './pages/Detail';
 import Error from './pages/Error';
 import ProductList from './pages/ProductList'
-import Cart from './components/Cart/Cart';
+import Cart from './pages/Cart';
 import ThemeProvider from './context/ThemeContext'
 import {CartProvider} from './context/CartContext'
 
