@@ -1,33 +1,33 @@
 import ItemList from '../ItemList/ItemList'
 import { useEffect, useState} from 'react'
 import {Row} from "react-bootstrap"
-import productos from '../../data/productsMock'
 import { Spinner } from 'reactstrap';
 import '../../App.css'
 //Firestore
-// import {collection, getDocs} from 'firebase/firesore';
-// import dataBase from '../../data/firebaseConfig';
+import {collection, getDocs} from 'firebase/firestore';
+import db from '../../data/firebaseConfig';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
+    useEffect( () => {
+        getProducts()
+        .then( (response) => {
+            setProducts(response)
+        })
+    }, [])
 
-const getProducts = () => {
-    return new Promise( (resolve, reject) => {
-        setTimeout(() => {
-            resolve(productos)
+    const getProducts = async () => {
+        const productSnapshot = await getDocs(collection ( db, "productos"));
+        const productList = productSnapshot.docs.map((doc)=>{
+            let product = doc.data()
+            product.id = doc.id
             setLoading(false)
-        }, 2000)
-    })
-}  
-
-useEffect( () => {
-    getProducts()
-    .then( (response) => {
-        setProducts(response)
-    })
-}, [])
+            return product
+        })
+        return productList
+    }
 
     return(
         <main className="container" >
@@ -40,5 +40,6 @@ useEffect( () => {
             }
         </main>
     )
+
 }
 export default ItemListContainer

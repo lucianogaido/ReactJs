@@ -1,10 +1,11 @@
 import ItemList from '../components/ItemList/ItemList';
 import {useParams} from 'react-router-dom'
 import { useEffect, useState } from 'react';
-import productos from '../data/productsMock'
 import {Row} from "react-bootstrap"
 import { Spinner } from 'reactstrap';
 import '../App.css'
+import {collection, getDocs} from 'firebase/firestore';
+import db from '../data/firebaseConfig';
 
 const ProductList = () => {
     const [products, setProduct]= useState([])
@@ -22,14 +23,16 @@ const ProductList = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [category])
 
-    const getItem = () => {
-        return new Promise( (resolve, reject) => {
-            setTimeout(() => {
-                setLoading(false)
-                resolve(productos)
-            }, 2000)
+    const getItem = async () => {
+        const productSnapshot = await getDocs(collection ( db, "productos"));
+        const productList = productSnapshot.docs.map((doc)=>{
+            let product = doc.data()
+            product.id = doc.id
+            setLoading(false)
+            return product
         })
-    }  
+        return productList
+    }
 
     return(
         <>
@@ -38,7 +41,7 @@ const ProductList = () => {
         <Spinner color='warning' className='spinner'/>
         :
         <Row  xs={1}  md={2} lg={3} className="container">
-            <ItemList key={productos.id} products={products}/>
+            <ItemList  products={products}/>
         </Row>
         }
         </>

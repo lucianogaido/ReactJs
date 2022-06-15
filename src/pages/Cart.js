@@ -85,7 +85,10 @@ const Cart = () => {
                 }
 
 
-                <Button as={Link} to='/' variant='warning' className='btn btn-outline-dark my-2 my-sm-0 bg-warning' >Continuar Comprando</Button>
+                <Button as={Link} to='/' variant='warning' 
+                className='btn btn-outline-dark my-2 my-sm-0 bg-warning' >
+                Continuar comprando
+                </Button>
                 
             </Container>
         </>
