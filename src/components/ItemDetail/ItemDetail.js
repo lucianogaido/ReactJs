@@ -1,4 +1,4 @@
-import { Container, Image, Button } from "react-bootstrap"
+import { Container, Image, Button, Row, Col } from "react-bootstrap"
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState } from "react";
@@ -27,7 +27,10 @@ const ItemDetail =({data}) => {
                     data={data}
                 />
                 :
-                <Button as={Link} to="/cart">Terminar mi Compra</Button>
+                <Row className="container" >
+                     <Col><Button variant="warning" as={Link} to="/">Continuar Comprando</Button> </Col>
+                     <Col><Button variant="warning" as={Link} to="/cart">Terminar mi Compra</Button> </Col>
+                </Row>
                 }
             </aside>
         </Container>

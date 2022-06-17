@@ -10,6 +10,7 @@ const ItemCount = ({stock, count, updatecount, setShowButton, data}) =>{
         title: data.title,
         image: data.image,
         price: data.price,
+        stock: data.stock,
         description: data.description,
         category: data.category,
         quantity: count

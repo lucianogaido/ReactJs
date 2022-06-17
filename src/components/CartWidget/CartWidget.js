@@ -3,6 +3,7 @@ import './CartWidget.css';
 import {Button, Modal, Container, Row, Col, } from "react-bootstrap"
 import {useState, useContext} from "react"
 import CartContext from '../../context/CartContext';
+import {Link} from 'react-router-dom'
 
 function MydModalWithGrid(props) {
     const {cartListItems,totalPrice, removeProduct, clearCart}= useContext(CartContext)
@@ -62,7 +63,7 @@ function MydModalWithGrid(props) {
             </Container>
             </Modal.Body>
             <Modal.Footer>
-            <Button variant='warning' className='btn btn-outline-dark my-2 my-sm-0 bg-warning' onClick={props.onHide}>Cerrar</Button>
+            <Button as={Link} to='/cart' variant='warning' className='btn btn-outline-dark my-2 my-sm-0 bg-warning' onClick={props.onHide}>Ir al Carrito</Button>
             <Button variant='warning' className='btn btn-outline-dark my-2 my-sm-0 bg-warning' onClick={() => clearCart()}>Vaciar Carrito</Button>
             </Modal.Footer>
         </Modal>

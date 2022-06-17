@@ -9,7 +9,6 @@ const CartProvider = ({children}) =>{
 
     const addProductToCart =(product)=>{
         let isInCart = cartListItems.find(cartItem => cartItem.data.id === product.data.id)
-
         setTotalPrice(totalPrice + (product.data.price * product.data.quantity))
         setcartAmount(cartAmount + product.data.quantity )
         if(!isInCart ){
