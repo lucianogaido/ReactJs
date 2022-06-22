@@ -8,6 +8,7 @@ import ProductList from './pages/ProductList'
 import Cart from './pages/Cart';
 import ThemeProvider from './context/ThemeContext'
 import {CartProvider} from './context/CartContext'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
               <Route path ='/item/:id' element={<Detail/>}/>
               <Route path='*' element={<Error/>}/>
               <Route path='/cart' element={<Cart/>}/>
-            </Routes>        
+            </Routes>
+            <Footer/>        
           </BrowserRouter>
         </ThemeProvider>
       </CartProvider>
