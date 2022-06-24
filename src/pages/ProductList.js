@@ -17,7 +17,7 @@ const ProductList = () => {
         setProduct([])
         getItem()
         .then( (response) => {
-            const productsByCategory = response.filter ((item)=> item.category ===category)
+            const productsByCategory = response.filter ((item)=> item.category === category)
             setProduct(productsByCategory)
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -35,16 +35,17 @@ const ProductList = () => {
     }
 
     return(
-        <>
+        <main className="container">
+
         <h2>{category.toUpperCase()}</h2>
         {loading ?
         <Spinner color='warning' className='spinner'/>
         :
-        <Row  xs={1}  md={2} lg={3} className="container">
+        <Row  xs={1}  md={2} lg={3}>
             <ItemList  products={products}/>
         </Row>
         }
-        </>
+        </main>
     )
 }
 

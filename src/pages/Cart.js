@@ -4,7 +4,7 @@ import CartContext from '../context/CartContext';
 import { useContext, useState } from "react"
 import { Link, useNavigate } from 'react-router-dom';
 import Contact from '../components/Contact/Contact';
-import {addDoc, collection} from 'firebase/firestore'
+import {addDoc, collection, increment, updateDoc, doc} from 'firebase/firestore'
 import db from '../data/firebaseConfig';
 
 const Cart = () => {
@@ -45,6 +45,10 @@ const Cart = () => {
         const orderFirebase = collection(db, 'ordenes')
         const orderDoc = await addDoc(orderFirebase, newOrder)
         setSuccess(orderDoc.id)
+        // newOrder.items.map((item)=>{
+        //     const productToUpdate = doc(db, 'productos', item.id)
+        //     updateDoc(productToUpdate, {stock: increment(-(item.quantity))})
+        // })
     }
     
     const navigate = useNavigate()
@@ -75,16 +79,6 @@ const Cart = () => {
             }
                 
                 {cartListItems.map((item)=>{
-                    // const disminuir = (id)=>{
-                    //     setcount(count - 1)
-                    //     setTotalPrice(totalPrice - item.data.price )
-                    // }
-                    
-                    // const aumentar = (id)=>{
-                    //     setcount(count + 1)
-                    //     setTotalPrice(totalPrice + item.data.price )
-                    // }
-                    // item.data.quantity = count
                     return(
                         <div key={item.data.id}>
                         
@@ -99,13 +93,7 @@ const Cart = () => {
                                 <p>${item.data.price}</p>
                             </Col>
                             <Col className="cart-item" xs={12} md={2}>                          
-                                {/* <Button variant="outline-warning" size="sm" className='cart-btn'onClick={()=> disminuir(item.data.id)}>
-                                    -
-                                </Button> */}
                                 <p>{item.data.quantity}</p>
-                                {/* <Button variant="outline-warning" size="sm" className='cart-btn' onClick={()=> aumentar(item.data.id)}>
-                                    +
-                                </Button> */}
                             </Col>
                             <Col className="cart-item" xs={12} md={2}>
                                 <p>${item.data.quantity*item.data.price}</p>
@@ -150,10 +138,6 @@ const Cart = () => {
                         <Form.Label>Telefono</Form.Label>
                         <Form.Control type="number" placeholder="Telefono" name="phone" value={formValue.phone} onChange={handleChange}/>
                     </Form.Group>
-                    {/* <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Barrio</Form.Label>
-                        <Form.Control type="text" placeholder="Localidad, Barrio" />
-                    </Form.Group> */}
                     <Form.Group className="mb-3" controlId="formBasicText">
                         <Form.Label>Dejanos tu Consulta</Form.Label>
                         <Form.Control type="text" placeholder="..." />
@@ -169,7 +153,7 @@ const Cart = () => {
                 </>
                 }
 
-                <Button as={Link} to='/' variant='warning' 
+                <Button as={Link} to='/products' variant='warning' 
                 className='cart-btn btn btn-outline-dark my-2 my-sm-0 bg-warning' >
                 Continuar comprando
                 </Button>

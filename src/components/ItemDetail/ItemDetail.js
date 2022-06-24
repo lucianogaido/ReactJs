@@ -18,7 +18,7 @@ const ItemDetail =({data}) => {
                 <h2>{data.title}</h2>
                 <div>{data.description}</div>
                 <p className="price">${data.price}</p>
-                {!showButton ?
+                {/* {!showButton ? */}
                 <ItemCount
                     count={count}
                     updatecount = {setcount}
@@ -28,10 +28,10 @@ const ItemDetail =({data}) => {
                 />
                 :
                 <Row className="container" >
-                     <Col><Button variant="warning" as={Link} to="/">Continuar Comprando</Button> </Col>
+                     <Col><Button variant="warning" as={Link} to="/products">Continuar Comprando</Button> </Col>
                      <Col><Button variant="warning" as={Link} to="/cart">Terminar mi Compra</Button> </Col>
                 </Row>
-                }
+                {/* } */}
             </aside>
         </Container>
         </>

@@ -9,21 +9,35 @@ const CartProvider = ({children}) =>{
 
     const addProductToCart =(product)=>{
         let isInCart = cartListItems.find(cartItem => cartItem.data.id === product.data.id)
-        setTotalPrice(totalPrice + (product.data.price * product.data.quantity))
-        localStorage.setItem('totalPrice', JSON.stringify(totalPrice + (product.data.price * product.data.quantity)))
-        setcartAmount(cartAmount + product.data.quantity )
-        localStorage.setItem('cartAmount', JSON.stringify(cartAmount + product.data.quantity))
-
+        console.log (product.data.stock)
+        let stock= product.data.stock
+        let quantity= product.data.quantity
         console.log(JSON.parse(localStorage.getItem(data.quantity)))
-        if(!isInCart ){
+        if((!isInCart) && (product.data.stock > product.data.quantity)){
             setCartListItems(cartListItems=>[...cartListItems,product])
             localStorage.setItem('products', JSON.stringify([...cartListItems,product]))
-        }else{
+            console.log (product.data.stock)
+            product.data.stock = stock - quantity
+            setTotalPrice(totalPrice + (product.data.price * product.data.quantity))
+            localStorage.setItem('totalPrice', JSON.stringify(totalPrice + (product.data.price * product.data.quantity)))
+            setcartAmount(cartAmount + product.data.quantity )
+            localStorage.setItem('cartAmount', JSON.stringify(cartAmount + product.data.quantity))
+        }else if ((isInCart) && (isInCart.data.stock > product.data.quantity)) {
             isInCart.data.quantity += product.data.quantity
             setCartListItems(cartListItems)
             localStorage.setItem('products',JSON.stringify(cartListItems))
-
+            console.log("stock del carrito", isInCart.data.stock)
+            isInCart.data.stock = isInCart.data.stock - quantity
+            console.log("stock del carrito", isInCart.data.stock)
+            setTotalPrice(totalPrice + (product.data.price * product.data.quantity))
+            localStorage.setItem('totalPrice', JSON.stringify(totalPrice + (product.data.price * product.data.quantity)))
+            setcartAmount(cartAmount + product.data.quantity )
+            localStorage.setItem('cartAmount', JSON.stringify(cartAmount + product.data.quantity))
+        } else{
+            console.log("no hay mas stock")
         }
+        console.log (product.data.stock)
+
     }
     const removeProduct = (product) => {
         const copyProducts = [...cartListItems];
