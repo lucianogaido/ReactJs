@@ -9,8 +9,8 @@ import BoostrapToast from "../Toast/Toast";
 const ItemDetail = ({ data }) => {
     const [count, setcount] = useState(1);
     const [showButton, setShowButton] = useState(false)
-    const { title, image, price, description } = data
     const [showToast, setShowToast] = useState(false)
+    const { title, image, price, description } = data
 
     return (
         <>
@@ -24,6 +24,7 @@ const ItemDetail = ({ data }) => {
                     <div>{description}</div>
                     <p className="price">${price}</p>
                     {!showButton ?
+                    
                         <>
                             <ItemCount
                                 count={count}

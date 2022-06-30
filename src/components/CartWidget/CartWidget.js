@@ -41,29 +41,29 @@ function OffCanvasCart({ name, ...props }) {
                             </Row>
                         }
 
-                        {cartListItems.map((item) => {
+                        {cartListItems.map(({ data }) => {
+                            const { id, image, title, price, quantity } = data
                             return (
-
-                                <div key={item.data.id}>
+                                <div key={id}>
 
                                     <Row >
                                         <Col className="cart-item" xs={3} md={3}>
-                                            <img src={`../${item.data.image}`} alt={item.data.title} />
+                                            <img src={`../${image}`} alt={title} />
                                         </Col>
                                         <Col className="cart-title" xs={3} md={3}>
-                                            <p>{item.data.title}</p>
+                                            <strong>{title}</strong>
                                         </Col>
                                         <Col className="cart-item" xs={2} md={2}>
-                                            <p>${item.data.price}</p>
+                                            <p><strong>${price}</strong></p>
                                         </Col>
                                         <Col className="cart-item" xs={1} md={1}>
-                                            <p>{item.data.quantity}</p>
+                                            <p><strong>{quantity}</strong></p>
                                         </Col>
                                         <Col className="cart-item" xs={2} md={2}>
-                                            <p>${item.data.quantity * item.data.price}</p>
+                                            <p><strong>${quantity * price}</strong></p>
                                         </Col>
 
-                                        <Col className="cart-item" xs={1} md={1}><FaTrashAlt id='trash-icon' onClick={() => removeProduct(item)} /></Col>
+                                        <Col className="cart-item" xs={1} md={1}><FaTrashAlt className='trash-icon' onClick={() => removeProduct({ data })} /></Col>
 
                                     </Row>
                                 </div>
@@ -71,7 +71,7 @@ function OffCanvasCart({ name, ...props }) {
                         })}
                         {cartListItems.length > 0 &&
                             <>
-                                <p className="cart-total">Total: ${totalPrice}</p>
+                                <p className="cart-total"><strong>Total: ${totalPrice}</strong></p>
                                 <Row className='buttons-cart'>
                                     <Col><Button as={Link} to='/cart' variant='warning' className='btn btn-outline-dark bg-warning' onClick={props.onHide}>Ir al Carrito</Button></Col>
                                     <Col><Button variant='warning' className='btn btn-outline-dark  bg-warning' onClick={() => clearCart()}>Vaciar Carrito</Button></Col>

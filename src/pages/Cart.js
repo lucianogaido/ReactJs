@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Contact from '../components/Contact/Contact';
 import { addDoc, collection, increment, updateDoc, doc } from 'firebase/firestore'
 import db from '../data/firebaseConfig';
-import "../App.css"
+import "../components/CartWidget/CartWidget.css"
 
 const Cart = () => {
     const { cartListItems, totalPrice, removeProduct, clearCart, cartAmount } = useContext(CartContext)
@@ -88,28 +88,29 @@ const Cart = () => {
                     </Row>
                 }
 
-                {cartListItems.map((item) => {
+                {cartListItems.map(({ data }) => {
+                    const { id, image, title, price, quantity } = data
                     return (
-                        <div key={item.data.id}>
+                        <div key={id}>
 
                             <Row >
                                 <Col className="cart-item" xs={12} md={2}>
-                                    <img src={`../${item.data.image}`} alt={item.data.title} />
+                                    <img src={`../${image}`} alt={title} />
                                 </Col>
                                 <Col className="cart-title" xs={12} md={3}>
-                                    <p>{item.data.title}</p>
+                                    <p><strong>{title}</strong></p>
                                 </Col>
                                 <Col className="cart-item" xs={12} md={2}>
-                                    <p>${item.data.price}</p>
+                                    <p><strong>${price}</strong></p>
                                 </Col>
                                 <Col className="cart-item" xs={12} md={2}>
-                                    <p>{item.data.quantity}</p>
+                                    <p><strong>{quantity}</strong></p>
                                 </Col>
                                 <Col className="cart-item" xs={12} md={2}>
-                                    <p>${item.data.quantity * item.data.price}</p>
+                                    <p><strong>${quantity * price}</strong></p>
                                 </Col>
 
-                                <Col className="cart-item" xs={6} md={1}><FaTrashAlt onClick={() => removeProduct(item)} /></Col>
+                                <Col className="cart-item" xs={6} md={1}><FaTrashAlt className='trash-icon' onClick={() => removeProduct({ data })} /></Col>
 
                             </Row>
                         </div>

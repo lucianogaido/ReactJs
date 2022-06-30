@@ -26,7 +26,7 @@ const ItemCount = ({ stock, count, updatecount, setShowButton, data, setShowToas
         <>
             <div className="itemCount">
                 <Button className="item-button" variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => updatecount(count - 1)} disabled={count === 1}>-</Button>
-                <p id="count">{count}</p>
+                <p id="count"><strong>{count}</strong></p>
                 <Button className="item-button" variant="btn btn-outline-dark my-2 my-sm-0 bg-warning" onClick={() => updatecount(count + 1)} disabled={count >= stock}>+</Button>
             </div>
             <Button variant="btn btn-outline-dark my-2 my-sm-0 bg-warning"

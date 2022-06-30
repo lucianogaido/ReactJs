@@ -58,7 +58,7 @@
 
 }
 
-#trash-icon {
+.trash-icon {
     fill: black;
     cursor: pointer;
 }

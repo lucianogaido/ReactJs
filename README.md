@@ -8,6 +8,7 @@ Al ser un proyecto que recien esta comenzando todavia no cuenta con imagenes pro
 
 ## Visual
 
+![GIF ANIMATION](public/Animation.gif)
 
 ## Instalación
 Para la misma instale la libreria "react-bootstrap" , ya que la conocia con anterioridad, me gustan sus estilos, estoy familiarizado con la misma y me da ciertas libertades sobretodo con la imagen que quiero darle a la marca. A su vez tambien instalé @fortawesome/react-fontawesome" para incorporar los iconos necesarios, tambien instalé react-bootstrap y reactstrap para incoporar Spinner louders y por ultimo "react-router-dom" para poder incomportar los Links y useParams. Libreria firebase la cual funciona de backend, donde estan todos los productos.
