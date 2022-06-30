@@ -1,75 +1,46 @@
 # Nuna Espiritu De la Tierra
+Es un e-commerce de productos artesanales.
+## Descripción
 
-Nuna es un microemprendimiento que comenzo hace apenas un año, el cual se dedica a comercializar productos artesanales que consisten en Mermeladas, Conservas y Blends de Té, todos ellos absolutamente naturales y sin conservantes.
+Nuna es un microemprendimiento que comenzó hace apenas un año, el cual se dedica a comercializar productos artesanales que consisten en Mermeladas, Conservas y Blends de Té, todos ellos absolutamente naturales y sin conservantes.
 Este es un Ecomerce , el cual comencé a crear desde el comienzo de la carrera Desarrollo Web Full Stack en CoderHouse. A medida que fui avanzando en los cursos fui dandole funcionalidades y estilos, hasta dar con el curso de ReactJs. El me propuso comenzar la app desde cero ya que la idea es que sea una Single Page Aplication.
-Al ser un proyecto que recien esta comenzando todavia no cuenta con imagenes propias, mas que el Logo. Intento continuar con la estetica de las versiones anteriores creadas por mi, ya que fueron las solicitadas por la clienta.
+Al ser un proyecto que recien esta comenzando todavia no cuenta con imagenes propias, mas que el Logo. Intento continuar con la estetica de las versiones anteriores creadas por mi, ya que fueron las solicitadas por la clienta. El sitio aun no esta subido a ningun Host.
 
-## Dependencias
-Para la misma instale la libreria "react-bootstrap" , ya que la conocia con anterioridad, me gustan sus estilos, estoy familiarizado con la misma y me da ciertas libertades sobretodo con la imagen que quiero darle a la marca. A su vez tambien instalé @fortawesome/react-fontawesome" para incorporar los iconos necesarios, tambien instalé bootstrap reactstrap para incoporar Spinner louders y por ultimo "react-router-dom" para poder incomportar los Links y useParams.
+## Visual
 
-## Available Scripts
 
-In the project directory, you can run:
+## Instalación
+Para la misma instale la libreria "react-bootstrap" , ya que la conocia con anterioridad, me gustan sus estilos, estoy familiarizado con la misma y me da ciertas libertades sobretodo con la imagen que quiero darle a la marca. A su vez tambien instalé @fortawesome/react-fontawesome" para incorporar los iconos necesarios, tambien instalé react-bootstrap y reactstrap para incoporar Spinner louders y por ultimo "react-router-dom" para poder incomportar los Links y useParams. Libreria firebase la cual funciona de backend, donde estan todos los productos.
+
+## Scripts Disponibles
+
+En el directorio del proyecto , puedes utilizar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Correrá la aplicación
+Abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La pagina se recargara cuando hagas cambios
+Puedes ver tambien todos los lint errors en la consola.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install`
 
-### `npm run build`
+Leerá todas las dependencias del archivo package.json y las intalará para que puedas visualizar correctamente la SPA.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+En un futuro me gustaria adicionar un buscador dentro del componente NavBar , el cual renderice el producto buscado. Tambien quisiera agregar un link al finalizar la compra que redireccione a una billetera virtual o pago online para que el usuario pueda finalizar la compra abonando la misma. Agregaria algunas alertas que den cuenta de que el producto no cuenta con stock suficiente.
 
-### `npm run eject`
+## Autores y Agradecimientos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Quiero agradecer en primer lugar a [CoderHouse](https://www.coderhouse.com/) por brindarme un espacio ameno y agradable de formación específica y generalizada, en el cual aprendi muchisimo y aun sigo haciendolo.
+En segundo lugar a [Christian Ortiz](https://github.com/cortiz2894) quien fue mi docente del curso de React JS, gracias a quien aprendi a programar con ésta biblioteca.
+Y por ultimo y no por eso menos importante a Jesús Pelozo , quien fue mi Tutor de este curso. Un gran tutor que me acompañó, escuchó, ayudó y despejó muchas dudas a lo largo de la cursada.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Estado del Proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+En elaboración y modificación continua.

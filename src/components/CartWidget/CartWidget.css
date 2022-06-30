@@ -1,50 +1,72 @@
-#cartIcon{
-    margin-left: 0.5rem;
+#cart-icon {
+    fill: black;
 }
-.cart-item{
-    text-align: center ;
+
+.cart-item {
+    text-align: center;
     padding: 2px;
 }
-.cart-menu-container{
+
+.cart-menu-container {
     border-bottom: 1px solid black;
 }
-.cart-menu{
-    text-align: center ;
+
+.cart-menu {
+    text-align: center;
     font-weight: 500;
     padding: 2px;
 }
+
 .cart-title {
-    text-align: center ;
+    text-align: center;
     padding: 2px;
     font-weight: 500;
 }
-.cart-total{
-    text-align: right ;
+
+.cart-total {
+    text-align: right;
     padding: 2px;
     font-weight: 500;
 }
-.cart-page-amount{
-    text-align: center ;
+
+.cart-page-amount {
+    text-align: center;
     padding: 2px;
     font-weight: 500;
     font-size: x-large;
 
 }
-.cart-page-total{
-    text-align: right ;
+
+.cart-page-total {
+    text-align: right;
     padding: 2px;
     font-weight: 500;
     font-size: x-large;
 }
-.cart-count{
+
+.cart-count {
     display: flex;
-    align-items:flex-start;
-    text-align: center ;
+    align-items: flex-start;
+    text-align: center;
     padding-top: 2px;
     padding-left: 1.5rem;
 }
-.cart-btn{
+
+.cart-btn {
     height: 2rem;
     margin: 2px;
 
+}
+
+#trash-icon {
+    fill: black;
+    cursor: pointer;
+}
+
+.p {
+    padding-left: 4rem;
+}
+
+.buttons-cart {
+    padding-left: 2rem;
 }

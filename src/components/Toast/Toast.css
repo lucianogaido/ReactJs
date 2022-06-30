@@ -1,0 +1,9 @@
+.toast {
+    position: fixed;
+    right: 0%;
+    bottom: 15%;
+}
+
+.header-toast {
+    padding-left: 4rem;
+}

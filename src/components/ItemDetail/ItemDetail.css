@@ -1,12 +1,13 @@
-.item_detail{
+.item_detail {
     margin-top: 2rem;
 }
-.imgDetail{
-    width: 30rem !important;
+
+.imgDetail {
+    width: 100% !important;
 }
 
-.price{
-    font-family:Arial, Helvetica, sans-serif;
+.price {
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: 0;
     color: #f48c46;
     font-weight: 600;
